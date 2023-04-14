@@ -70,8 +70,8 @@ minify = true
 
 [menu]
   [[menu.main]]
-    identifier = "index"
-    name       = "Celestial Globe"
+    identifier = "Celestial Globe"
+    name       = "Index"
     url        = "/"
     weight     = -111
 
