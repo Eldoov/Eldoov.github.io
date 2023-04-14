@@ -24,4 +24,4 @@ url = "mailto:zuowent@bu.edu"
   [[menu.header]]
     name = "posts"
     weight = 0
-    url = "/content/posts"
+    url = "/posts"
