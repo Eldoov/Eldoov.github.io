@@ -1,9 +1,6 @@
-baseURL = ''
-languageCode = 'en-us'
-title = 'Celestial Globe'
-theme = "lines"
-
-
+baseURL = "https://lines-hugo-theme.netlify.app/"
+languageCode = "en-us"
+title = "Lines - Minimalist Hugo theme"
 disableKinds = ["section", "categories"]
 disqusShortname = ""
 pygmentsCodeFences = false
@@ -76,7 +73,13 @@ minify = true
     weight     = -111
 
   [[menu.main]]
-    identifier = "github"
-    name       = "Github"
-    url        = "https://github.com/Eldoov"
+    identifier = "about"
+    name       = "About"
+    url        = "/about/"
+    weight     = -20
+
+  [[menu.main]]
+    identifier = "rss"
+    name       = "RSS"
+    url        = "/atom.xml"
     weight     = -10

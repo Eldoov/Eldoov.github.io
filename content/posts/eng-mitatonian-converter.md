@@ -1,6 +1,6 @@
 ---
 title: "English to Mitatonian Converter"
-date: 2023-04-14T01:15:19-04:00
+date: 2023-04-12T01:15:19-04:00
 draft: false
 ---
 
@@ -16,21 +16,21 @@ draft: false
 
 输入：
 
-![img](images/img001.png)
+![img](/images/img001.png)
 
 输出：
 
-![img](images/img02.png)
+![img](/images/img02.png)
 
 
 
 **（2）文本量大的话，可以直接输入文档txt：**
 
-![img](images/image-6-1024x260.png)
+![img](/images/image-6-1024x260.png)
 
 译文会输出为txt，将字体改为Mitatonian-Regular就可以看到最终效果：
 
-![img](images/image-4-1024x566.png)
+![img](/images/image-4-1024x566.png)
 
 
 
