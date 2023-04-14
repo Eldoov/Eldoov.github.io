@@ -1,0 +1,27 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Celestial Globe'
+theme = "nightfall"
+#theme = "photophobia"
+
+[params]
+author = "Celestial Globe"
+user = "Eldoov"
+hostname = "Celestial Globe"
+
+[[params.social]]
+key = 0
+name = "Github"
+url = "https://github.com/eldoov"
+#icon = "fa-brands fa-github"  # Add link to your icon font to `layouts/partials/custom-head.html`
+
+[[params.social]]
+key = 1
+name = "Email"
+url = "mailto:zuowent@bu.edu"
+
+[menu]
+  [[menu.header]]
+    name = "posts"
+    weight = 0
+    url = "/content/posts"
