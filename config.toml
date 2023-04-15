@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'Eldoov.github.io'
 languageCode = 'en-us'
 title = 'Celestial Globe'
 theme = "lines"
@@ -71,7 +71,7 @@ minify = true
 [menu]
   [[menu.main]]
     identifier = "Celestial Globe"
-    name       = "Index"
+    name       = "Celestial Globe"
     url        = "/"
     weight     = -111
 
