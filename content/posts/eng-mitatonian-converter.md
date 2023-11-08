@@ -1,6 +1,6 @@
 ---
 title: "English to Mitatonian Converter"
-date: 2023-04-12T01:15:19-04:00
+date: 2023-04-12
 draft: false
 ---
 

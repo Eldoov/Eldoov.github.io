@@ -1,6 +1,6 @@
 ---
 title: "Linux command notes (1)"
-date: 2023-11-07T00:16:09-04:00
+date: 2023-11-07
 draft: false
 ---
 
@@ -14,13 +14,17 @@ draft: false
 | sort                                                         | 为文件重新排序                                               |
 | [uniq](https://man7.org/linux/man-pages/man1/uniq.1.html)<br />-u | 剔除重复行<br />只显示出现过一次的行                         |
 | [strings](https://man7.org/linux/man-pages/man1/strings.1.html) | 打印文件中可被打印的字符                                     |
-|                                                              |                                                              |
-|                                                              |                                                              |
-|                                                              |                                                              |
+| [tr](https://man7.org/linux/man-pages/man1/tr.1.html)        | 翻译或删除字符，[凯撒密码](https://en.wikipedia.org/wiki/ROT13) [案例](https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/#) |
+| gzip,bzip2<br />-d                                           | 压缩/解压缩<br />解压缩                                      |
+| tar<br />-xvf                                                | 压缩/解压缩<br />解压缩                                      |
+| xxd ([hendump](https://en.wikipedia.org/wiki/Hex_dump))<br />-r | 为单一文件创建hexdump版本<br />还原原文件                    |
+| mkdir                                                        | 创建目录                                                     |
+| mv [filename] [newname]                                      | 更改文件名（包括扩展名）                                     |
+| cp                                                           | 复制文件                                                     |
 
 
 
-###其他笔记：
+## 其他笔记：
 
 “-”不能作为文件名使用，会出现误以为是命令的情况，使用cat ./- 可以读取当前目录下文件名为“-”的文件。
 

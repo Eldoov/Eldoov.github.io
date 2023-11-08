@@ -1,6 +1,6 @@
 ---
 title: "Pandas Note 1"
-date: 2023-04-10T01:14:55-04:00
+date: 2023-04-10
 draft: false
 ---
 

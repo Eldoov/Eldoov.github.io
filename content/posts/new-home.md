@@ -1,6 +1,6 @@
 ---
 title: "New Home"
-date: 2023-04-14T00:16:09-04:00
+date: 2023-04-14
 draft: false
 ---
 
