@@ -12,6 +12,10 @@ paginate = 999
 minify = true
 
 
+[markup.goldmark]
+    [markup.goldmark.renderer]
+    unsafe = true 
+
 [taxonomies]
   tag = "tags"
 
