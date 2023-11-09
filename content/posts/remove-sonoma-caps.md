@@ -10,7 +10,7 @@ Like this:
 
 ![img](/images/sonoma-caps.png)
 
-使用以下指令可以使其消失不见：
+使用以下指令+重启可以使其消失不见：
 
 ```
 sudo mkdir -p /Library/Preferences/FeatureFlags/Domain
