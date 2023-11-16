@@ -93,6 +93,8 @@ LDAP（Lightweight Directory Access Protocol）是一种开放标准协议，用
 
 LDAP注入通过在LDAP查询中插入恶意代码来绕过认证、获取敏感信息或者篡改目录数据。
 
+***LDAP使用端口389**
+
 **示例：**
 
 ```scss
