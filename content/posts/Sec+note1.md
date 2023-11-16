@@ -1,6 +1,6 @@
 ---
 title: "SQL,DLL,XML和LDAP"
-date: 2023-11-15
+date: 2023-11-15T14:18:50
 draft: false
 ---
 

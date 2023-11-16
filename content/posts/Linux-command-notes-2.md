@@ -1,6 +1,6 @@
 ---
 title: "Linux command notes (2)"
-date: 2023-11-14
+date: 2023-11-15T18:18:50
 draft: false
 ---
 
