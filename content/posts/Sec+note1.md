@@ -93,7 +93,7 @@ LDAP（Lightweight Directory Access Protocol）是一种开放标准协议，用
 
 LDAP注入通过在LDAP查询中插入恶意代码来绕过认证、获取敏感信息或者篡改目录数据。
 
-示例：
+**示例：**
 
 ```scss
 (&(username=输入的用户名)(password=输入的密码))
@@ -107,7 +107,7 @@ LDAP注入通过在LDAP查询中插入恶意代码来绕过认证、获取敏感
 
 可能导致绕过身份认证。
 
-防范方法：使用参数化LDAP查询+Input Validation；以及采用严格的访问控制策略，确保只有授权用户能够执行LDAP查询。
+**防范方法：**使用参数化LDAP查询+Input Validation；以及采用严格的访问控制策略，确保只有授权用户能够执行LDAP查询。
 
 ---
 
