@@ -46,7 +46,7 @@ XML（eXtensible Markup Language）是一种**标记语言**，长得和HTML有�
 
 XML注入是通过在应用程序处理XML数据时插入恶意XML代码，来进行未经授权的操作。
 
-示例：
+**示例：**
 
 某应用程序从XML文件中提取用户数据：
 
