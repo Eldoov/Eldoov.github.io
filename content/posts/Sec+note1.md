@@ -1,5 +1,5 @@
 ---
-title: "SQL,XML,LDAP和DLL"
+title: "SQL,DLL,XML和LDAP"
 date: 2023-11-15
 draft: false
 ---
@@ -10,7 +10,7 @@ SQL（Structured Query Language）是一种用来**管理**和**查询** *关系
 
 SQL注入是指在SQL查询中插入恶意SQL代码，从而绕过认证、获取信息或修改数据库。
 
-示例：
+**示例：**
 
 某网站使用如下代码验证登陆
 
@@ -25,6 +25,18 @@ SELECT * FROM users WHERE username = 'admin' OR '1'='1'; --' AND password = '';
 ```
 
 ；后的内容会被无视，导致返回所有用户信息，因为条件中的或门1=1始终为真。
+
+**防范方法：**使用参数化查询或者预编译语句，确保用户输入在执行SQL语句时被当作数据而不是代码处理。Input Validation可以有效防范SQL注入。
+
+---
+
+#### DLL和DLL注入
+
+DLL（Dynamic Link Library）是动态链接库，包含了可以被多个程序调用的代码和数据，在Windows系统中尤为重要。在安装软件时出现无法执行的情况，有时可以用更新对应.dll文件修复问题。常见库有kernel32.dll、user32.dll、Comdlg32.dll等。DLL库等好处在于不同应用程序可以调用同一个DLL，这样就不用重复储存相同的代码，节省资源。
+
+DLL注入就是将恶意DLL文件加载到目标进程的地址空间中。这个可以通过多种手段实现，比如注入工具、注入代码或者其他的系统工具。一旦该恶意DLL被注入进了目标进程，就会执行代码，攻击者可以通过DLL执行各种操作，比如监视、篡改内存、拦截函数调用、记录键盘等待。
+
+**防范方式：**采用代码签名，使用最新的安全措施和防护软件，以确保动态链接库（DLL）文件的完整性和合法性，防止被替换或滥用。
 
 ---
 
@@ -49,19 +61,57 @@ XML注入是通过在应用程序处理XML数据时插入恶意XML代码，来�
 
 关于XML具体如何工作，请见[Testing for XML Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
 
+**防范方法：**Input Validation可以有效防止XML注入。
+
+---
+
+*因为经常搞混XML和XSS，这里附注一下XSS的工作方式：*
+
+#### XSS攻击
+
+XSS（Cross-Site Scripting）为跨站脚本攻击，使用web应用注入恶意脚本，使其在用户的浏览器上执行，可以用来盗取用户的session、敏感信息等，还可以在用户界面上执行恶意操作。常见的XSS攻击包括在输入字段、URL参数或者cookie中插入恶意脚本，当用户访问包含这些脚本的页面时，脚本会在浏览器上执行。
+
+**防范方法：**Input Validation可以有效防止XSS注入。
+
+
+
+**XSS和XML的区别：**
+
+- **攻击目标：** XSS攻击的目标是用户的浏览器，而XML注入攻击的目标是XML解析器。
+- **数据类型：** XSS攻击涉及HTML和JavaScript，而XML注入涉及XML数据。
+- **攻击向量：** XSS攻击通常利用用户输入中的脚本，而XML注入则是通过插入恶意XML结构来攻击XML解析器。
+
+
+
+**共同点：**都可以被Input Validation防止。
+
 ---
 
 #### LDAP和LDAP注入
 
+LDAP（Lightweight Directory Access Protocol）是一种开放标准协议，用于访问和维护分布式目录信息服务。常见用途为身份验证，储存用户名和密码，其储存方式为目录层次结构化，和SQL的表哥化不同。在Docker、Krbernetes、OpenVPN中可以用到。
 
+LDAP注入通过在LDAP查询中插入恶意代码来绕过认证、获取敏感信息或者篡改目录数据。
 
+示例：
 
+```scss
+(&(username=输入的用户名)(password=输入的密码))
+```
 
+如果用户输入的用户名是 `*)(cn=*))(|(cn=*`，则查询可能变成：
 
+```
+(&(username=*)(cn=*))(|(cn=*)(password=输入的密码))
+```
 
+可能导致绕过身份认证。
 
+防范方法：使用参数化LDAP查询+Input Validation；以及采用严格的访问控制策略，确保只有授权用户能够执行LDAP查询。
 
 ---
+
+
 
 附赠一个Chatgpt的expain it like I'm five版：
 
